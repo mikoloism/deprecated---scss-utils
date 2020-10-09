@@ -1,0 +1,37 @@
+// @import color-variable-module
+@mixin reset {
+	* {
+		margin: 0;
+		padding: 0;
+		outline: 0;
+		box-sizing: border-box;
+		z-index: 1;
+	}
+
+	body {
+		background: $light;
+		color: $dark;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	body,
+	input,
+	button {
+		font-size: $fontSize;
+		font-family: $fontName;
+	}
+
+	%input-clear {
+		outline: none;
+		border: none;
+		background: transparent;
+		box-shadow: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	button {
+		cursor: pointer;
+	}
+}
+@include reset;
