@@ -1,4 +1,8 @@
 // @import color-variable-module
+$light: white;
+$dark: black;
+$font-size: 16px;
+$font-dima-web: 'dima web';
 @mixin reset {
 	* {
 		margin: 0;
@@ -17,8 +21,8 @@
 	body,
 	input,
 	button {
-		font-size: $fontSize;
-		font-family: $fontName;
+		font-size: $font-size;
+		font-family: $font-dima-web;
 	}
 
 	%input-clear {
