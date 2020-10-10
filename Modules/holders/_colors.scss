@@ -1,0 +1,52 @@
+// @import '../variables/colors';
+
+%bg-parent  { background-color: transparent; }
+%bg-primary { background-color: $primary; 	 }
+%bg-info  	{ background-color: $info; 		 }
+%bg-sky  	{ background-color: $sky; 		 }
+
+%bg-rose 	  { background-color: $rose; 		}
+%bg-dark-rose { background-color: $darken-rose; }
+%bg-pink 	  { background-color: $pink; 		}
+
+%bg-gold 	   { background-color: $gold; 		}
+%bg-golden 	   { background-color: $golden; 	}
+%bg-dark-gold  { background-color: $dark-gold;  }
+%bg-light-gold { background-color: $light-gold; }
+
+%bg-success			{ background-color: $success;		  }
+%bg-dark-success	{ background-color: $dark-success;	  }
+%bg-light-success 	{ background-color: $light-success;	  }
+%bg-lighten-success { background-color: $lighten-success; }
+
+%bg-dark	  { background-color: $dark;	  }
+%bg-gray	  { background-color: $gray;	  }
+%bg-light 	  { background-color: $light;	  }
+%bg-secondary { background-color: $secondary; }
+
+// --------------------
+// 		foreground
+// --------------------
+%fg-parent  { color: transparent; }
+%fg-primary { color: $primary;	  }
+%fg-info  	{ color: $info;		  }
+%fg-sky  	{ color: $sky;		  }
+
+%fg-rose 	  { color: $rose;		 }
+%fg-dark-rose { color: $darken-rose; }
+%fg-pink 	  { color: $pink; 		 }
+
+%fg-gold 	   { color: $gold;		 }
+%fg-golden 	   { color: $golden;	 }
+%fg-dark-gold  { color: $dark-gold;  }
+%fg-light-gold { color: $light-gold; }
+
+%fg-success			{ color: $success;		   }
+%fg-dark-success	{ color: $dark-success;	   }
+%fg-light-success 	{ color: $light-success;   }
+%fg-lighten-success { color: $lighten-success; }
+
+%fg-dark	  { color: $dark;	   }
+%fg-gray	  { color: $gray;	   }
+%fg-light 	  { color: $light;	   }
+%fg-secondary { color: $secondary; }
