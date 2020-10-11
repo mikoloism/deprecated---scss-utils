@@ -1,0 +1,142 @@
+
+//
+	// $w <width>
+	// $wn <min-width>
+	// $wx <max-width>
+	// $wa <width:min-width:max-width>
+
+	// $h <height>
+	// $hn <min-height>
+	// $hx <max-height>
+	// $ha <height:min-height:max-height>
+
+	// $wh <width:height>
+	// $an <min-width:min-height>
+	// $ax <max-width:max-height>
+	// $a <all-them>
+//
+
+@function getSize ( $size : 0 ) {
+	@return percentage( $number: ( $size / 12 ) )
+}
+
+@mixin size ( // width and height
+	// all
+	$a: null,
+
+	// width
+	$w: null,
+	$wn: null,
+	$wx: null,
+	$wa: null,
+
+	// height
+	$h: null,
+	$hn: null,
+	$hx: null,
+	$ha: null,
+
+	// together
+	$wh: null,
+	$an: null,
+	$ax: null,
+
+) {
+	@if $a != null { @include size( $wa: $a, $ha: $a ); }
+	@else {
+		@if $wa != null { @include size( $w: $wa, $wn: $wa, $wx: $wa ); }
+		@if $ha != null { @include size( $h: $ha, $hn: $ha, $hx: $ha ); }
+		@else {
+			@if $wh != null { @include size( $w: $wh, $h: $wh ); }
+			@if $an != null { @include size( $wn: $an, $hn: $an ); }
+			@if $ax != null { @include size( $wx: $ax, $hx: $ax ); }
+			@else {
+
+				//? width
+				@include width( $w, $wx, $wn );
+
+				//? height
+				@include height( $h, $hx, $hn, );
+
+			}
+		}
+	}
+}
+
+@mixin fill {
+	@include size( $a : 100% );
+}
+
+@function hasUnit ( $number: null ){
+	@if $number == null { @return null; }
+	@else if unit($number: $number) == px or unit($number: $number) == \% or unit($number: $number) == rem { @return true; }
+	@else { @return false; }
+}
+
+@mixin width ( $width : null, $max : null, $min : null, $all : null ) {
+
+	//? check
+	@if $all != null {
+		@include width( $all, $all, $all, null );
+	}
+	@else {
+		//? width
+		@if $width != null {
+			@if hasUnit($width) == false {
+				@if $width >= 1 and $width <= 12 { width: getSize($width); }
+			}
+			@else { width: $width; }
+		}
+
+		//? min-width
+		@if $min != null {
+			@if hasUnit($min) == false {
+				@if $min >= 1 and $min <= 12 { min-width: getSize($min); }
+			}
+			@else { min-width: $min; }
+		}
+
+		//? max-width
+		@if $max != null {
+			@if hasUnit($max) == false {
+				@if $max >= 1 and $max <= 12 { max-width: getSize($max); }
+			}
+			@else { max-width: $max; }
+		}
+	}
+
+}
+
+@mixin height ( $height : null, $max : null, $min : null, $all : null ) {
+
+	//? check
+	@if $all != null {
+		@include height ( $all, $all, $all, null );
+	}
+	@else {
+		//? height
+		@if $height != null {
+			@if hasUnit($height) == false {
+				@if $height >= 1 and $height <= 12 { height: getSize($height); }
+			}
+			@else { height: $height; }
+		}
+
+		//? min-height
+		@if $min != null {
+			@if hasUnit($min) == false {
+				@if $min >= 1 and $min <= 12 { min-height: getSize($min); }
+			}
+			@else { min-height: $min; }
+		}
+
+		//? max-height
+		@if $max != null {
+			@if hasUnit($max) == false {
+				@if $max >= 1 and $max <= 12 { max-height: getSize($max); }
+			}
+			@else { max-height: $max; }
+		}
+	}
+
+}

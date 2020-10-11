@@ -1,0 +1,312 @@
+
+// ------------------
+// 		WIDTH
+// ------------------
+//>>> WIDTH <<<//
+%w-100 { width: 100%; }
+%w-75 { width: 75%; }
+%w-50 { width: 50%; }
+%w-25 { width: 25%; }
+%w-0 { width: 0px; }
+%w-100v { width: 100vw; }
+%w-75v { width: 75vh; }
+%w-50v { width: 50vw; }
+%w-25v { width: 25vw; }
+//>>> MAX-WIDTH <<<//
+%wx-100 { max-width: 100%; }
+%wx-75 { max-width: 75%; }
+%wx-50 { max-width: 50%; }
+%wx-25 { max-width: 25%; }
+%wx-0 { max-width: 0px; }
+%wx-100v { max-width: 100vw; }
+%wx-75v { max-width: 75vh; }
+%wx-50v { max-width: 50vw; }
+%wx-25v { max-width: 25vw; }
+//>>> MIN-WIDTH <<<//
+%wn-100 { min-width: 100%; }
+%wn-75 { min-width: 75%; }
+%wn-50 { min-width: 50%; }
+%wn-25 { min-width: 25%; }
+%wn-0 { min-width: 0px; }
+%wn-100v { min-width: 100vw; }
+%wn-75v { min-width: 75vh; }
+%wn-50v { min-width: 50vw; }
+%wn-25v { min-width: 25vw; }
+//>>> ALL-WIDTH <<<//
+%wa-100 {
+	@extend %w-100;
+	@extend %wx-100;
+	@extend %wn-100;
+}
+%wa-75 {
+	@extend %w-75;
+	@extend %wx-75;
+	@extend %wn-75;
+}
+%wa-50 {
+	@extend %w-50;
+	@extend %wx-50;
+	@extend %wn-50;
+}
+%wa-25 {
+	@extend %w-25;
+	@extend %wx-25;
+	@extend %wn-25;
+}
+%wa-0 {
+	@extend %w-0;
+	@extend %wx-0;
+	@extend %wn-0;
+}
+%wa-100v {
+	@extend %w-100v;
+	@extend %wx-100v;
+	@extend %wn-100v;
+}
+%wa-75v {
+	@extend %w-75v;
+	@extend %wx-75v;
+	@extend %wn-75v;
+}
+%wa-50v {
+	@extend %w-50v;
+	@extend %wx-50v;
+	@extend %wn-50v;
+}
+%wa-25v {
+	@extend %w-25v;
+	@extend %wx-25v;
+	@extend %wn-25v;
+}
+
+// ------------------
+// 		HEIGHT
+// ------------------
+//>>> HEIGHT <<<//
+%h-100 { height: 100%; }
+%h-75 { height: 75%; }
+%h-50 { height: 50%; }
+%h-25 { height: 25%; }
+%h-0 { height: 0px; }
+%h-100v { height: 100vh; }
+%h-75v { height: 75vh; }
+%h-50v { height: 50vh; }
+%h-25v { height: 25vh; }
+//>>> MAX-HEIGHT <<<//
+%hx-100 { max-height: 100%; }
+%hx-75 { max-height: 75%; }
+%hx-50 { max-height: 50%; }
+%hx-25 { max-height: 25%; }
+%hx-0 { max-height: 0px; }
+%hx-100v { max-height: 100vh; }
+%hx-75v { max-height: 75vh; }
+%hx-50v { max-height: 50vh; }
+%hx-25v { max-height: 25vh; }
+//>>> MIN-HEIGHT <<<//
+%hn-100 { min-height: 100%; }
+%hn-75 { min-height: 75%; }
+%hn-50 { min-height: 50%; }
+%hn-25 { min-height: 25%; }
+%hn-0 { min-height: 0px; }
+%hn-100v { min-height: 100vh; }
+%hn-75v { min-height: 75vh; }
+%hn-50v { min-height: 50vh; }
+%hn-25v { min-height: 25vh; }
+//>>> ALL-HEIGHT <<<//
+%ha-100 {
+	@extend %h-100;
+	@extend %hx-100;
+	@extend %hn-100;
+}
+%ha-75 {
+	@extend %h-75;
+	@extend %hx-75;
+	@extend %hn-75;
+}
+%ha-50 {
+	@extend %h-50;
+	@extend %hx-50;
+	@extend %hn-50;
+}
+%ha-25 {
+	@extend %h-25;
+	@extend %hx-25;
+	@extend %hn-25;
+}
+%ha-0 {
+	@extend %h-0;
+	@extend %hx-0;
+	@extend %hn-0;
+}
+%ha-100v {
+	@extend %h-100v;
+	@extend %hx-100v;
+	@extend %hn-100v;
+}
+%ha-75v {
+	@extend %h-75v;
+	@extend %hx-75v;
+	@extend %hn-75v;
+}
+%ha-50v {
+	@extend %h-50v;
+	@extend %hx-50v;
+	@extend %hn-50v;
+}
+%ha-25v {
+	@extend %h-25v;
+	@extend %hx-25v;
+	@extend %hn-25v;
+}
+
+// ------------------
+// 		ALL
+// ------------------
+//>>> SIZE <<<//
+%size-100 {
+	@extend %w-100;
+	@extend %h-100;
+}
+%size-75 {
+	@extend %w-75;
+	@extend %h-75;
+}
+%size-50 {
+	@extend %w-50;
+	@extend %h-50;
+}
+%size-25 {
+	@extend %w-25;
+	@extend %h-25;
+}
+%size-0 {
+	@extend %w-0;
+	@extend %h-0;
+}
+%size-100v {
+	@extend %w-100v;
+	@extend %h-100v;
+}
+%size-75v {
+	@extend %w-75v;
+	@extend %h-75v;
+}
+%size-50v {
+	@extend %w-50v;
+	@extend %h-50v;
+}
+%size-25v {
+	@extend %w-25v;
+	@extend %h-25v;
+}
+//>>> MAX-SIZE <<<//
+%size-x-100 {
+	@extend %wx-100;
+	@extend %hx-100;
+}
+%size-x-75 {
+	@extend %wx-75;
+	@extend %hx-75;
+}
+%size-x-50 {
+	@extend %wx-50;
+	@extend %hx-50;
+}
+%size-x-25 {
+	@extend %wx-25;
+	@extend %hx-25;
+}
+%size-x-0 {
+	@extend %wx-0;
+	@extend %hx-0;
+}
+%size-x-100v {
+	@extend %wx-100v;
+	@extend %hx-100v;
+}
+%size-75v {
+	@extend %wx-75v;
+	@extend %hx-75v;
+}
+%size-x-50v {
+	@extend %wx-50v;
+	@extend %hx-50v;
+}
+%size-x-25v {
+	@extend %wx-25v;
+	@extend %hx-25v;
+}
+//>>> MIN-SIZE <<<//
+%size-n-100 {
+	@extend %wn-100;
+	@extend %hn-100;
+}
+%size-n-75 {
+	@extend %wn-75;
+	@extend %hn-75;
+}
+%size-n-50 {
+	@extend %wn-50;
+	@extend %hn-50;
+}
+%size-n-25 {
+	@extend %wn-25;
+	@extend %hn-25;
+}
+%size-n-0 {
+	@extend %wn-0;
+	@extend %hn-0;
+}
+%size-n-100v {
+	@extend %wn-100v;
+	@extend %hn-100v;
+}
+%size-n-75v {
+	@extend %wn-75v;
+	@extend %hn-75v;
+}
+%size-n-50v {
+	@extend %wn-50v;
+	@extend %hn-50v;
+}
+%size-n-25v {
+	@extend %wn-25v;
+	@extend %hn-25v;
+}
+//>>> ALL-SIZE <<<//
+%size-a-100 {
+	@extend %wa-100;
+	@extend %ha-100;
+}
+%size-a-75 {
+	@extend %wa-75;
+	@extend %ha-75;
+}
+%size-a-50 {
+	@extend %wa-50;
+	@extend %ha-50;
+}
+%size-a-25 {
+	@extend %wa-25;
+	@extend %ha-25;
+}
+%size-a-0 {
+	@extend %wa-0;
+	@extend %ha-0;
+}
+%size-a-100v {
+	@extend %wa-100v;
+	@extend %ha-100v;
+}
+%size-a-75v {
+	@extend %wa-75v;
+	@extend %ha-75v;
+}
+%size-a-50v {
+	@extend %wa-50v;
+	@extend %ha-50v;
+}
+%size-a-25v {
+	@extend %wa-25v;
+	@extend %ha-25v;
+}

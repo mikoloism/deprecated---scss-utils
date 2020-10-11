@@ -1,0 +1,98 @@
+%flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	@extend %align;
+}
+%flx-row { flex-direction: row; }
+%flx-col { flex-direction: column; }
+%flx-wrap { flex-wrap: wrap; }
+%flx-nowrap { flex-wrap: nowrap; }
+
+%flx-center {
+	@extend %flex;
+	@extend %alg-center;
+}
+%flx-end {
+	@extend %flex;
+	@extend %alg-end;
+}
+%flx-str {
+	@extend %flex;
+	@extend %alg-str;
+}
+%flx-around {
+	@extend %flex;
+	@extend %alg-around;
+}
+%flx-between {
+	@extend %flex;
+	@extend %alg-between;
+}
+%flx-evenly {
+	@extend %flex;
+	@extend %alg-evenly;
+}
+
+%justify { justify-content: flex-start; }
+%jus { @extend %justify; }
+%jus-start { @extend %justify; }
+%jus-center { justify-content: center; }
+%jus-end { justify-content: flex-end; }
+%jus-str { justify-content: stretch; }
+%jus-around { justify-content: space-around; }
+%jus-between { justify-content: space-between; }
+%jus-evenly { justify-content: space-evenly; }
+
+%items { align-items: flex-start; }
+%itm { @extend %items; }
+%itm-start { @extend %items; }
+%itm-center { align-items: center; }
+%itm-end { align-items: flex-end; }
+%itm-str { align-items: stretch; }
+
+%content { justify-content: flex-start; }
+%cnt { @extend %content; }
+%cnt-start { @extend %content; }
+%cnt-center { justify-content: center; }
+%cnt-end { justify-content: flex-end; }
+%cnt-around { justify-content: space-around; }
+%cnt-between { justify-content: space-between; }
+%cnt-evenly { justify-content: space-evenly; }
+
+%align {
+	@extend %jus;
+	@extend %itm;
+	@extend %cnt;
+}
+%alg-start { @extend %align; }
+%alg-center {
+	@extend %jus-center;
+	@extend %itm-center;
+	@extend %cnt-center;
+}
+%alg-end {
+	@extend %jus-end;
+	@extend %itm-end;
+	@extend %cnt-end;
+}
+%alg-str {
+	@extend %jus-str;
+	@extend %itm-str;
+	@extend %cnt-center;
+}
+%alg-around {
+	@extend %jus-around;
+	@extend %itm-center;
+	@extend %cnt-around;
+}
+%alg-between {
+	@extend %jus-between;
+	@extend %itm-center;
+	@extend %cnt-between;
+}
+%alg-evenly {
+	@extend %jus-evenly;
+	@extend %itm-center;
+	@extend %cnt-evenly;
+}

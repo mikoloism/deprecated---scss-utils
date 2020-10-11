@@ -1,0 +1,63 @@
+
+// 	poser => ( $t: <top>, ... )
+// 	pos   => ( $type: <position>, $t: <top>, ... )
+// 	abs, rel ,  fix, stk, ... => ( $t: <top>, ... )
+
+// 	rel <relative>;
+// 	abs <absolute>;
+// 	fix <fixed>;
+// 	stk <sticky>;
+
+// 	$t <top>      => mixin( $t:<value> ); @ top: $t;
+// 	$l <left>     => mixin( $l:<value> ); @ left: $l;
+// 	$b <bottom>   => mixin( $b:<value> ); @ bottom: $b;
+// 	$r <right>    => mixin( $r:<value> ); @ right: $r;
+// 	$a <all-them> => mixin( $a:<value> ); @ top: $t; left: $l; ...;
+
+@mixin _pos ( // xy pos
+	$t: null,
+	$l: null,
+	$b: null,
+	$r: null,
+	$a: null
+) {
+	@if $a != null {
+		@include _pos( $a, $a, $a, $a );
+	}
+	@else {
+		@if $t != null { top: $t; }
+		@if $l != null { left: $l; }
+		@if $b != null { bottom: $b; }
+		@if $r != null { right: $r; }
+	}
+}
+
+@mixin pos ( // position and xy pos
+	$type : relative,
+	$t : null,
+	$l : null,
+	$b: null,
+	$r : null,
+	$a : null) {
+
+	position: $type;
+	@include _pos( $t, $l, $b, $r, $a );
+
+}
+
+@mixin rel ( $t: null, $l: null, $b: null, $r: null, $a: null ) {
+	@include pos( relative, $t, $l, $b, $r, $a );
+}
+
+@mixin abs ( $t: null, $l: null, $b: null, $r: null, $a: null ) {
+	@include pos( absolute, $t, $l, $b, $r, $a );
+}
+
+@mixin fix ( $t: null, $l: null, $b: null, $r: null, $a: null ) {
+	@include pos( fixed, $t, $l, $b, $r, $a );
+}
+
+@mixin stk ( $t: null, $l: null, $b: null, $r: null, $a: null ) {
+	@include pos( sticky, $t, $l, $b, $r, $a );
+}
+

@@ -1,0 +1,74 @@
+@mixin block ( // block
+	$size : null,
+	$extend: false) {
+
+	// check inline :
+	@if $extend==false { display: inline-block; }
+	@else { display: block; }
+
+	// width :
+	@include size ( $wa: $size );
+}
+
+@mixin flex ( // flex
+
+	$dir : row,
+	$wrap : wrap,
+	$justify: null,
+	$align : null,
+	$content: null,
+	$extend : true) {
+
+	// check inline :
+	@if $extend==false { display: inline-flex; }
+	@else {display: flex; }
+	flex-direction: $dir;
+	flex-wrap: $wrap;
+
+	// align
+	@include align( $justify: $justify, $align: $align, $content: $align );
+
+}
+
+@mixin align ( // aligns
+	$all: null,
+	$flex: null,
+	$justify: null,
+	$align : null,
+	$content: null,
+	$text: null
+) {
+	@if $all != null { @include align( null, $all, $all, $all, $all ); }
+	@else if $flex != null { @include align( null, null, $all, $all, $all, null ); }
+	@else {
+		@if $justify !=null { justify-content: $justify; }
+		@if $align !=null { align-items: $align; }
+		@if $content !=null { align-content: $content; }
+		@if $text !=null { text-align: $text; }
+	}
+}
+
+@mixin self ( // align-self
+	$all: null,
+	$justify: null,
+	$align : null,
+	$content: null
+) {
+	@if $all != null { @include self( null, $all, $all, $all ); }
+	@else {
+		@if $justify !=null { justify-self: $justify; }
+		@if $align !=null { align-self: $align; }
+		@if $content !=null { place-self: $content; }
+	}
+}
+
+@mixin center (
+	$flex: false,
+	$text: false,
+	$all: false
+) {
+	@if $all == true { @include align( center ); }
+	@else if $flex == false and $text == false { @include align( $flex: center ); }
+	@else if $text == true { @include align( $text: center ); }
+	@else if $flex == true { @include align( $flex: center ); }
+}

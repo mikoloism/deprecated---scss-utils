@@ -1,0 +1,64 @@
+@import './color.scss';
+@import './display.scss';
+@import './position.scss';
+@import './size.scss';
+
+%block { display: block; }
+%in-block { display: inline-block; }
+%none { display: none; }
+
+%font-size { font-size: 16px; }
+%font-size-1 { font-size: 1rem; }
+%font-size-2 { font-size: 2rem; }
+%font-dima { font-family: 'dima web'; }
+%font-lalezar { font-family: 'lalezar'; }
+%font-bold { font-weight: bold; }
+%font-norm { font-weight: normal; }
+
+%stk-none { stroke: none; }
+%brd-none { border: none; }
+%border-5 { border: .5rem solid rgba($dark, .4); }
+%border-3 { border: .3rem solid rgba($dark, .4); }
+%border-1 { border: .1rem solid rgba($dark, .4); }
+%brd-1 { border: 1px solid transparent; }
+%brd-3 { border: 3px solid transparent; }
+%brd-3r { border: .3rem solid transparent; }
+
+%circle { border-radius: 3rem; }
+%rounded { border-radius: .5rem; }
+%round { border-radius: .3rem; }
+%rounder { border-radius: 1rem; }
+%around { border-radius: 3px; }
+
+%shadow-1 { box-shadow: 0 0 .3rem 0 rgba($gray, .5); }
+%shadow-2 { box-shadow: .1rem .1rem .3rem 0 rgba($gray, .5); }
+%shadow-none { box-shadow: none; }
+
+%reset-none {
+	@extend %stk-none;
+	@extend %brd-none;
+	@extend %shadow-none;
+	&:hover,&:focus,&:active {
+		@extend %stk-none;
+		@extend %brd-none;
+		@extend %shadow-none;
+	}
+}
+
+%click {
+	transition: .25s cubic-bezier(0.47, 0, 0.745, 0.715) all;
+	cursor: pointer;
+	&:hover {
+		transform: scale(1.1);
+		&:active { transform: scale(.8); }
+	}
+}
+
+%after {
+	content: "";
+	display: block;
+}
+%before {
+	content: "";
+	display: block;
+}

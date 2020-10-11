@@ -1,0 +1,200 @@
+// ----------------
+// 		TOP
+// ----------------
+%top-0 { top: 0; }
+%top-25 { top: 25% }
+%top-50 { top: 50%; }
+%top-full { top: 100%; }
+%top-100 { @extend %top-full; }
+
+// ----------------
+// 		LEFT
+// ----------------
+%left-0 { left: 0; }
+%left-25 { left: 25% }
+%left-50 { left: 50%; }
+%left-full { left: 100%; }
+%left-100 { @extend %left-full; }
+
+// ----------------
+// 		BOTTOM
+// ----------------
+%bottom-0 { bottom: 0; }
+%bottom-25 { bottom: 25% }
+%bottom-50 { bottom: 50%; }
+%bottom-full { bottom: 100%; }
+%bottom-100 { @extend %bottom-full; }
+
+// ----------------
+// 		RIGHT
+// ----------------
+%right-0 { right: 0; }
+%right-25 { right: 25% }
+%right-50 { right: 50%; }
+%right-full { right: 100%; }
+%right-100 { @extend %right-full; }
+
+// ----------------------------
+// 		POSITION-ALL
+// ----------------------------
+%pos-tl {
+	@extend %top-0;
+	@extend %left-0;
+}
+%pos-tl-50 {
+	@extend %top-50;
+	@extend %left-50;
+}
+%pos-tr {
+	@extend %top-0;
+	@extend %right-0;
+}
+%pos-bl {
+	@extend %bottom-0;
+	@extend %left-0;
+}
+%pos-br {
+	@extend %bottom-0;
+	@extend %right-0;
+}
+%pos-0000 {
+	@extend %top-0;
+	@extend %left-0;
+	@extend %bottom-0;
+	@extend %right-0;
+}
+%pos-00 { @extend %pos-tl; }
+
+// ----------------------------
+// 		POSITION: RELATIVE
+// ----------------------------
+%rel { position: relative; }
+%rel-0 {
+	@extend %rel;
+	@extend %top-0;
+}
+%rel-00 {
+	@extend %rel;
+	@extend %pos-00;
+}
+
+// ----------------------------
+// 		POSITION: ABSOLUTE
+// ----------------------------
+%abs { position: absolute; }
+%abs-0 {
+	@extend %abs;
+	@extend %top-0;
+}
+%abs-full {
+	@extend %abs;
+	@extend %pos-0000;
+}
+%abs-0000 {
+	@extend %abs-full;
+}
+%abs-00 {
+	@extend %abs;
+	@extend %pos-00;
+}
+%abs-tl {
+	@extend %abs;
+	@extend %pos-tl;
+}
+%abs-tr {
+	@extend %abs;
+	@extend %pos-tr;
+}
+%abs-bl {
+	@extend %abs;
+	@extend %pos-bl;
+}
+%abs-br {
+	@extend %abs;
+	@extend %pos-br;
+}
+%abs-t {
+	@extend %abs;
+	@extend %top-0;
+}
+%abs-l {
+	@extend %abs;
+	@extend %left-0;
+}
+%abs-b {
+	@extend %abs;
+	@extend %bottom-0;
+}
+%abs-r {
+	@extend %abs;
+	@extend %right-0;
+}
+%abs-tl-50 {
+	@extend %abs;
+	@extend %pos-tl-50;
+}
+
+// ----------------------------
+// 		POSITION: FIXED
+// ----------------------------
+%fix { position: fixed; }
+%fix-0 {
+	@extend %fix;
+	@extend %top-0;
+}
+%fix-full {
+	@extend %fix;
+	@extend %pos-0000;
+}
+%fix-0000 {
+	@extend %fix-full;
+}
+%fix-00 {
+	@extend %fix;
+	@extend %pos-00;
+}
+%fix-tl {
+	@extend %fix;
+	@extend %pos-tl;
+}
+%fix-tr {
+	@extend %fix;
+	@extend %pos-tr;
+}
+%fix-bl {
+	@extend %fix;
+	@extend %pos-bl;
+}
+%fix-br {
+	@extend %fix;
+	@extend %pos-br;
+}
+%fix-t {
+	@extend %fix;
+	@extend %top-0;
+}
+%fix-l {
+	@extend %fix;
+	@extend %left-0;
+}
+%fix-b {
+	@extend %fix;
+	@extend %bottom-0;
+}
+%fix-r {
+	@extend %fix;
+	@extend %right-0;
+}
+%fix-tl-50 {
+	@extend %fix;
+	@extend %pos-tl-50;
+}
+
+// ----------------------------
+// 		POSITION: STICKY
+// ----------------------------
+%stick { position: sticky; }
+%sticky {
+	@extend %stick;
+	top: 0;
+}
