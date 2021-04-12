@@ -5,5 +5,6 @@ useful utilities sass/scss files, like
 2. variables (colors, fonts, constant, ...)
 3. functions (start with underscore "_")
 4. placeholders (use alik class-name)
-5. fork as folder structure
+5. fork as folder structure\
+
 created with BEM model
