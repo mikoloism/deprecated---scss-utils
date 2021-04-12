@@ -1,6 +1,6 @@
-# Sass/Scss
+# Sass/Scss ![Preview](https://img.shields.io/badge/Preview-c33?style=for-the-badge)
 
-![Preview](https://img.shields.io/badge/Preview-c33?style=for-the-badge)
+
 ![GitHub](https://img.shields.io/github/license/miko-github/scss?style=plastic)
 
 **NOTE:** need to review
