@@ -1,5 +1,10 @@
 # Sass/Scss
 
+![Preview](https://img.shields.io/badge/Preview-c33?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/miko-github/scss?style=plastic)
+
+**NOTE:** need to review
+
 useful utilities sass/scss files, like
 1. mixins (boxing, sizing, grid, layouts, ...)
 2. variables (colors, fonts, constant, ...)
