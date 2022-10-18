@@ -1,3 +1,9 @@
+**DEPRECATED on `Oct 18 2022`**
+
+hint : rebranded to `yek/sass`
+
+<!--
+
 # Sass/Scss ![Preview](https://img.shields.io/badge/Preview-c33?style=for-the-badge)
 
 
@@ -13,3 +19,6 @@ useful utilities sass/scss files, like
 5. fork as folder structure\
 
 created with BEM model
+
+
+-->
